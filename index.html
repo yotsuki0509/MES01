@@ -450,25 +450,7 @@ const employees =[
       { name: "錢巧菁A086", dept: "宗瑋廠_組裝" },
       { name: "阮氏芳鶯A055", dept: "宗瑋廠_組裝" }
 ];
-// 篩選函式，加在原本顯示前
-function filterByEmployeeAndFactory(attendanceList, selectedFactory) {
-    return attendanceList.filter(att => 
-        att.factory === selectedFactory && 
-        employeeList.some(emp => emp.name === att.name && emp.factory === att.factory)
-    );
-}
 
-// 原本顯示上工的程式（假設是這樣）
-function displayAttendance(attendanceList, selectedFactory) {
-    // 加上篩選
-    const filteredList = filterByEmployeeAndFactory(attendanceList, selectedFactory);
-
-    // 以下保持原本顯示邏輯
-    filteredList.forEach(att => {
-        // 原本的 DOM 顯示程式
-        console.log(att.name); // 或者你的表格填充程式
-    });
-}
 // ========= 2️⃣ 你原本的程式讀 Excel 上下工紀錄 =========
 // records = ... 這裡讀 Excel
         
@@ -936,6 +918,7 @@ Object.keys(employees).forEach(id => {
 </body>
 
 </html>
+
 
 
 
