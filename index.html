@@ -453,14 +453,6 @@ const employees =[
 
 // ========= 2️⃣ 你原本的程式讀 Excel 上下工紀錄 =========
 // records = ... 這裡讀 Excel
-        const uploadArea = document.getElementById('uploadArea');
-        const fileInput = document.getElementById('fileInput');
-
-        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-            uploadArea.addEventListener(eventName, preventDefaults, false);
-        });
-
-
         let allProcessedData = null;
         let processedData = null;
 
@@ -925,6 +917,7 @@ Object.keys(employees).forEach(id => {
 </body>
 
 </html>
+
 
 
 
